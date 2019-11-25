@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: for_each
+# key: fre
+# --
+foreach(${1:var item} in ${2:items})
+{
+   $0
+}
