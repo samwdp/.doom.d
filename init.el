@@ -8,6 +8,7 @@
 ;; More information about these modules (and what flags they support) can be
 ;; found in modules/README.org.
 
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
 (doom! :input
        ;;chinese
        ;;japanese
