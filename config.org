@@ -1,0 +1,56 @@
+#+TITLE: Doom Configuration
+#+AUTHOR: Sam Precious
+#+EMAIL: samwdp@gmail.com
+#+LANGUAGE: en
+#+STARTUP: inlineimages
+#+PROPERTY: header-args :tangle yes :cache yes :results silent :padline no
+
+* Table Of Contents :toc:
+- [[#configuration][Configuration]]
+  - [[#personal-infromation][Personal Infromation]]
+  - [[#doom-theming][Doom Theming]]
+  - [[#languages][Languages]]
+  - [[#key-remaps][Key Remaps]]
+
+* Configuration
+** Personal Infromation
+*** Name
+#+BEGIN_SRC emacs-lisp
+(setq user-full-name "Sam Precious")
+#+END_SRC
+*** Email Address
+#+BEGIN_SRC emacs-lisp
+(setq user-mail-address "samwdp@gmail.com")
+#+END_SRC
+** Doom Theming
+*** Line Numbers
+#+BEGIN_SRC emacs-lisp
+(setq display-line-numbers-type 'relative)
+#+END_SRC
+*** Font
+#+BEGIN_SRC emacs-lisp
+ (setq doom-font (font-spec :family "FiraCode NF" :size 14))
+#+END_SRC
+*** Theme
+#+BEGIN_SRC emacs-lisp
+(setq  doom-theme 'doom-gruvbox
+ doom-gruvbox-brighter-comments 't)
+#+END_SRC
+*** Banner
+#+BEGIN_SRC emacs-lisp
+(setq +doom-dashboard-banner-dir
+      (concat doom-private-dir "banners/"))
+#+END_SRC
+*** Mode Line
+#+BEGIN_SRC emacs-lisp
+(setq doom-modeline-major-mode-color-icon t)
+#+END_SRC
+** Languages
+*** Omnisharp
+#+BEGIN_SRC emacs-lisp
+(setq omnisharp-expected-server-version "1.35.4")
+#+END_SRC
+** Key Remaps
+#+BEGIN_SRC emacs-lisp
+(setq doom-localleader-key "m" )
+#+END_SRC
