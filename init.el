@@ -15,6 +15,7 @@
 ;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
+(add-to-list 'load-path "C:/Users/SamPrecious/AppData/Roaming/.doom.d/tools/babel/ob-pwsh/src")
 (doom! :input
        ;;chinese
        ;;japanese
@@ -97,7 +98,7 @@
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
-       pdf               ; pdf enhancements
+       ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
        rgb               ; creating color strings
        ;;taskrunner        ; taskrunner for all your projects
