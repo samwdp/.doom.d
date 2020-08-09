@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: namespacew
+# key: namespacew
+# uuid: namespacew
+# --
+namespace $1
+{
+    `(or yas/selected-text (car kill-ring))`
+}
