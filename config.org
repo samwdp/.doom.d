@@ -51,6 +51,10 @@
 (toggle-frame-maximized)
 #+END_SRC
 ** Tools
+*** Projectile
+#+BEGIN_SRC emacs-lisp
+(setq projectile-indexing-method 'native)
+#+END_SRC
 *** Spelling
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'exec-path "C:/hunspell/bin/")
@@ -58,11 +62,12 @@
 (setq ispell-local-dictionary "en_GB")
 (setq ispell-local-dictionary-alist
 '(("en_GB" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_GB") nil utf-8)))
+;;(setq ispell-hunspell-dict-paths-alist
+;;'(("en_GB" "C:/hunspell/share/hunspell/en_GB.aff")))
+;;(setq ispell-local-dictionary "en_GB")
+;;(setq ispell-local-dictionary-alist
+;;'(("en_GB" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_GB") nil utf-8)))
 #+END_SRC
-*** Projectile
-#+BEGIN_SRC emacs-lisp
-(setq projectile-indexing-method 'native)
-#+END_SRC** Projectile
 ** Languages
 *** Omnisharp
 #+BEGIN_SRC emacs-lisp
