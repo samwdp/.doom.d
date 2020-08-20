@@ -34,8 +34,7 @@
 #+END_SRC
 *** Theme
 #+BEGIN_SRC emacs-lisp
-(setq  doom-theme 'doom-gruvbox
- doom-gruvbox-brighter-comments 't)
+(setq  doom-theme 'doom-gruvbox)
 #+END_SRC
 *** Banner
 #+BEGIN_SRC emacs-lisp
@@ -53,16 +52,12 @@
 ** Tools
 *** Spelling
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'exec-path "C:/hunspell/bin/")
-(setq ispell-program-name (locate-file "hunspell" exec-path exec-suffixes 'file-executable-p))
-(setq ispell-local-dictionary "en_GB")
-(setq ispell-local-dictionary-alist
-'(("en_GB" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_GB") nil utf-8)))
+(setq ispell-program-name "hunspell")
 #+END_SRC
 *** Projectile
 #+BEGIN_SRC emacs-lisp
 (setq projectile-indexing-method 'native)
-#+END_SRC** Projectile
+#+END_SRC
 ** Languages
 *** Omnisharp
 #+BEGIN_SRC emacs-lisp
