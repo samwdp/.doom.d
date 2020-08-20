@@ -21,7 +21,7 @@ determine the exact padding."
   :type '(choice integer boolean))
 
 ;;
-(def-doom-theme doom-gruvbox
+(def-doom-theme my-doom-gruvbox
   "Dark theme with pastel 'retro groove' colors."
 
   ;; name        gui       256       16
@@ -91,7 +91,7 @@ determine the exact padding."
    (org-quote `(,(doom-lighten (car bg) 0.05) "#1f1f1f")))
 
   ;; --- extra faces ------------------------
-(
+  (
    ;;;;;;;; Editor ;;;;;;;;
    (cursor :background "white")
    (hl-line :background bg-alt)
