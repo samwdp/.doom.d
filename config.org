@@ -50,6 +50,10 @@
 (toggle-frame-maximized)
 #+END_SRC
 ** Tools
+*** Projectile
+#+BEGIN_SRC emacs-lisp
+(setq projectile-indexing-method 'native)
+#+END_SRC
 *** Spelling
 #+BEGIN_SRC emacs-lisp
 (setq ispell-program-name "hunspell")
