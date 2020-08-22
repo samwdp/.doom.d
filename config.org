@@ -34,7 +34,8 @@
 #+END_SRC
 *** Theme
 #+BEGIN_SRC emacs-lisp
-(setq  doom-theme 'doom-gruvbox)
+(setq doom-theme 'my-doom-gruvbox
+      doom-gruvbox-brighter-comments t)
 #+END_SRC
 *** Banner
 #+BEGIN_SRC emacs-lisp
@@ -57,6 +58,14 @@
 *** Spelling
 #+BEGIN_SRC emacs-lisp
 (setq ispell-program-name "hunspell")
+#+END_SRC
+*** Babel
+#+BEGIN_SRC emacs-lisp
+;;(org-babel-do-load-languages
+;; 'org-babel-load-languages
+;; '((csharp . t)
+;;   (powershell . t)
+;;   ))
 #+END_SRC
 *** Projectile
 #+BEGIN_SRC emacs-lisp
