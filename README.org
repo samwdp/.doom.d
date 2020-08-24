@@ -1,0 +1,19 @@
+#+TITLE: README
+#+AUTHOR: Sam Precious
+
+* Table of Contents :toc:
+- [[#about][About]]
+- [[#config][Config]]
+- [[#custom-files][Custom Files]]
+  - [[#powershell-script-for-windows][Powershell script for windows]]
+
+* About
+This is my personal doom emacs configuration for primarily C# development and some other fun things.
+There are some custom made snippets that I use that I think are neccessary when developing in Emacs
+
+* Config
+#+INCLUDE: "./config.org"
+
+* Custom Files
+** Powershell script for windows
+#+INCLUDE: "Configure-WindowsEnvironment.ps1" src powershell
