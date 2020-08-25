@@ -30,8 +30,9 @@
 #+END_SRC
 *** Font
 #+BEGIN_SRC emacs-lisp
- (setq doom-font (font-spec :family "FiraCode NF" :size 14))
+(setq doom-font (font-spec :family "Fira Code" :size 14))
 #+END_SRC
+
 *** Theme
 #+BEGIN_SRC emacs-lisp
 (setq doom-theme 'my-doom-gruvbox
@@ -61,11 +62,11 @@
 #+END_SRC
 *** Babel
 #+BEGIN_SRC emacs-lisp
-;;(org-babel-do-load-languages
-;; 'org-babel-load-languages
-;; '((csharp . t)
-;;   (powershell . t)
-;;   ))
+(org-babel-do-load-languages
+'org-babel-load-languages
+'((csharp . t)
+(powershell . t)
+))
 #+END_SRC
 *** Projectile
 #+BEGIN_SRC emacs-lisp
