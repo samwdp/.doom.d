@@ -2,8 +2,7 @@
 (setq user-mail-address "samwdp@gmail.com")
 (setq display-line-numbers-type 'relative)
 (setq doom-font (font-spec :family "Fira Code" :size 14))
-(setq doom-theme 'my-doom-gruvbox
-      doom-gruvbox-brighter-comments t)
+(setq doom-theme 'doom-dark+)
 (setq +doom-dashboard-banner-dir
       (concat doom-private-dir "banners/"))
 (setq doom-modeline-major-mode-color-icon t)
