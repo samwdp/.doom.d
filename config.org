@@ -32,7 +32,6 @@
 #+BEGIN_SRC emacs-lisp
 (setq doom-font (font-spec :family "Fira Code" :size 14))
 #+END_SRC
-
 *** Theme
 #+BEGIN_SRC emacs-lisp
 (setq doom-theme 'doom-dark+)
@@ -49,6 +48,12 @@
 *** Maximized Frame
 #+BEGIN_SRC emacs-lisp
 (toggle-frame-maximized)
+#+END_SRC
+*** Column Display
+#+BEGIN_SRC emacs-lisp
+(setq-default fill-column 100)
+(add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook)
+           #'display-fill-column-indicator-mode)
 #+END_SRC
 ** Tools
 *** Projectile
@@ -77,6 +82,7 @@
 (setq omnisharp-expected-server-version "1.35.4")
 #+END_SRC
 ** Key Remaps
+*** Ctrl-/ for Comment/Uncomment
 #+BEGIN_SRC emacs-lisp
-(setq doom-localleader-key "m" )
+(global-set-key "\C-/" 'comment-line)
 #+END_SRC
