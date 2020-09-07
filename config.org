@@ -72,17 +72,9 @@
 (powershell . t)
 ))
 #+END_SRC
-*** Projectile
-#+BEGIN_SRC emacs-lisp
-(setq projectile-indexing-method 'native)
-#+END_SRC
 ** Languages
-*** Omnisharp
-#+BEGIN_SRC emacs-lisp
-(setq omnisharp-expected-server-version "1.35.4")
-#+END_SRC
 ** Key Remaps
 *** Ctrl-/ for Comment/Uncomment
 #+BEGIN_SRC emacs-lisp
-(global-set-key "\C-/" 'comment-line)
+(global-set-key (kbd "C-/") 'comment-line)
 #+END_SRC

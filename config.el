@@ -17,6 +17,4 @@
 '((csharp . t)
 (powershell . t)
 ))
-(setq projectile-indexing-method 'native)
-(setq omnisharp-expected-server-version "1.35.4")
-(global-set-key "\C-/" 'comment-line)
+(global-set-key (kbd "C-/") 'comment-line)
