@@ -34,7 +34,7 @@
 #+END_SRC
 *** Theme
 #+BEGIN_SRC emacs-lisp
-(setq doom-theme 'doom-dark+)
+(setq doom-theme 'doom-gruvbox)
 #+END_SRC
 *** Banner
 #+BEGIN_SRC emacs-lisp
