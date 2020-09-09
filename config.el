@@ -18,5 +18,5 @@
 (powershell . t)
 ))
 (use-package! csharp-mode
-  :mode (("\\.csx\\'")))
+  :mode (("\\.csx\\'" . csharp-mode)))
 (global-set-key (kbd "C-/") 'comment-line)
