@@ -7,6 +7,7 @@
 
 * Table Of Contents :toc:
 - [[#configuration][Configuration]]
+  - [[#global-optimisations][Global Optimisations]]
   - [[#personal-information][Personal Information]]
   - [[#doom-theming][Doom Theming]]
   - [[#tools][Tools]]
@@ -14,6 +15,11 @@
   - [[#key-remaps][Key Remaps]]
 
 * Configuration
+** Global Optimisations
+*** Unicode
+#+BEGIN_SRC emacs-lisp
+(setq inhibit-compacting-font-caches t)
+#+END_SRC
 ** Personal Information
 *** Name
 #+BEGIN_SRC emacs-lisp
@@ -43,7 +49,7 @@
 #+END_SRC
 *** Mode Line
 #+BEGIN_SRC emacs-lisp
-(setq doom-modeline-major-mode-color-icon t)
+;; (setq doom-modeline-major-mode-color-icon t)
 #+END_SRC
 *** Maximized Frame
 #+BEGIN_SRC emacs-lisp
@@ -55,6 +61,10 @@
 (add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook)
            #'display-fill-column-indicator-mode)
 #+END_SRC
+*** Modeline
+#+BEGIN_SRC emacs-lisp
+(setq doom-modeline-buffer-file-name-style nil)
+#+END_SRC
 ** Tools
 *** Projectile
 #+BEGIN_SRC emacs-lisp
@@ -62,7 +72,7 @@
 #+END_SRC
 *** Spelling
 #+BEGIN_SRC emacs-lisp
-(setq ispell-program-name "hunspell")
+;; (setq ispell-program-name "hunspell")
 #+END_SRC
 *** Babel
 #+BEGIN_SRC emacs-lisp
