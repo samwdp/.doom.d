@@ -20,6 +20,10 @@
 #+BEGIN_SRC emacs-lisp
 (setq inhibit-compacting-font-caches t)
 #+END_SRC
+*** Org Mode
+#+BEGIN_SRC emacs-lisp
+(setq org-directory "~/Dropbox/org")
+#+END_SRC
 ** Personal Information
 *** Name
 #+BEGIN_SRC emacs-lisp
