@@ -3,7 +3,7 @@
 (setq user-full-name "Sam Precious")
 (setq user-mail-address "samwdp@gmail.com")
 (setq display-line-numbers-type 'relative)
-(setq doom-font (font-spec :family "Fira Code" :size 14))
+(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 14))
 (setq doom-theme 'doom-gruvbox)
 (setq +doom-dashboard-banner-dir
       (concat doom-private-dir "banners/"))
@@ -16,10 +16,12 @@
 (setq projectile-indexing-method 'native)
 ;; (setq ispell-program-name "hunspell")
 (org-babel-do-load-languages
-'org-babel-load-languages
-'((csharp . t)
-(powershell . t)
-))
+ 'org-babel-load-languages
+ '((csharp . t)
+   (powershell . t)))
+(setq lsp-ui-doc-max-width 300)
+(setq lsp-ui-doc-max-height 500)
+(setq lsp-ui-doc-position 'top)
 (use-package! csharp-mode
   :mode (("\\.csx\\'" . csharp-mode)))
 (global-set-key (kbd "C-/") 'comment-line)

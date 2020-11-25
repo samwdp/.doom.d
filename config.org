@@ -40,7 +40,7 @@
 #+END_SRC
 *** Font
 #+BEGIN_SRC emacs-lisp
-(setq doom-font (font-spec :family "Fira Code" :size 14))
+(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 14))
 #+END_SRC
 *** Theme
 #+BEGIN_SRC emacs-lisp
@@ -81,10 +81,15 @@
 *** Babel
 #+BEGIN_SRC emacs-lisp
 (org-babel-do-load-languages
-'org-babel-load-languages
-'((csharp . t)
-(powershell . t)
-))
+ 'org-babel-load-languages
+ '((csharp . t)
+   (powershell . t)))
+#+END_SRC
+*** LSP
+#+BEGIN_SRC emacs-lisp
+(setq lsp-ui-doc-max-width 300)
+(setq lsp-ui-doc-max-height 500)
+(setq lsp-ui-doc-position 'top)
 #+END_SRC
 ** Languages
 *** CSX
