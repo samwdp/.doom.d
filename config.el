@@ -3,15 +3,12 @@
 (setq user-full-name "Sam Precious")
 (setq user-mail-address "samwdp@gmail.com")
 (setq display-line-numbers-type 'relative)
-(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 14))
+(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 20))
 (setq doom-theme 'doom-gruvbox)
 (setq +doom-dashboard-banner-dir
       (concat doom-private-dir "banners/"))
 ;; (setq doom-modeline-major-mode-color-icon t)
 (toggle-frame-maximized)
-(setq-default fill-column 100)
-(add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook)
-           #'display-fill-column-indicator-mode)
 (setq doom-modeline-buffer-file-name-style nil)
 (setq projectile-indexing-method 'native)
 ;; (setq ispell-program-name "hunspell")
@@ -19,9 +16,15 @@
  'org-babel-load-languages
  '((csharp . t)
    (powershell . t)))
-(setq lsp-ui-doc-max-width 300)
-(setq lsp-ui-doc-max-height 500)
-(setq lsp-ui-doc-position 'top)
+(setq lsp-headerline-breadcrumb-enable t)
+(setq lsp-ui-doc-enable t)
+(setq lsp-ui-doc-position 'top-right-angle)
+(setq lsp-ui-doc-alignment 'frame)
+(setq lsp-lens-enable t)
+(setq lsp-ui-sideline-enable nil)
 (use-package! csharp-mode
   :mode (("\\.csx\\'" . csharp-mode)))
 (global-set-key (kbd "C-/") 'comment-line)
+;; (global-set-key (kbd "C-c n") 'sharper-main-transient)
+
+;; Some Functions

@@ -87,9 +87,12 @@
 #+END_SRC
 *** LSP
 #+BEGIN_SRC emacs-lisp
-(setq lsp-ui-doc-max-width 300)
-(setq lsp-ui-doc-max-height 500)
-(setq lsp-ui-doc-position 'top)
+(setq lsp-headerline-breadcrumb-enable t)
+(setq lsp-ui-doc-enable t)
+(setq lsp-ui-doc-position 'top-right-angle)
+(setq lsp-ui-doc-alignment 'frame)
+(setq lsp-lens-enable t)
+(setq lsp-ui-sideline-enable nil)
 #+END_SRC
 ** Languages
 *** CSX
@@ -101,4 +104,5 @@
 *** Ctrl-/ for Comment/Uncomment
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-/") 'comment-line)
+(global-set-key (kbd "C-c n") 'sharper-main-transient)
 #+END_SRC
