@@ -23,6 +23,7 @@
 *** Org Mode
 #+BEGIN_SRC emacs-lisp
 (setq org-directory "~/Dropbox/org")
+(setq org-log-done 'time)
 #+END_SRC
 ** Personal Information
 *** Name
@@ -40,7 +41,7 @@
 #+END_SRC
 *** Font
 #+BEGIN_SRC emacs-lisp
-(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 14))
+(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 18))
 #+END_SRC
 *** Theme
 #+BEGIN_SRC emacs-lisp
@@ -51,32 +52,24 @@
 (setq +doom-dashboard-banner-dir
       (concat doom-private-dir "banners/"))
 #+END_SRC
-*** Mode Line
-#+BEGIN_SRC emacs-lisp
-;; (setq doom-modeline-major-mode-color-icon t)
-#+END_SRC
 *** Maximized Frame
 #+BEGIN_SRC emacs-lisp
 (toggle-frame-maximized)
 #+END_SRC
-*** Column Display
-#+BEGIN_SRC emacs-lisp
-(setq-default fill-column 100)
-(add-hook! '(text-mode-hook prog-mode-hook conf-mode-hook)
-           #'display-fill-column-indicator-mode)
-#+END_SRC
 *** Modeline
 #+BEGIN_SRC emacs-lisp
 (setq doom-modeline-buffer-file-name-style nil)
+(setq doom-modeline-buffer-encoding nil)
+(add-hook 'after-init-hook #'display-battery-mode)
 #+END_SRC
+*** Scrolling
+#+begin_src emacs-lisp
+(setq scroll-margin 6)
+#+end_src
 ** Tools
 *** Projectile
 #+BEGIN_SRC emacs-lisp
 (setq projectile-indexing-method 'native)
-#+END_SRC
-*** Spelling
-#+BEGIN_SRC emacs-lisp
-;; (setq ispell-program-name "hunspell")
 #+END_SRC
 *** Babel
 #+BEGIN_SRC emacs-lisp
@@ -87,13 +80,18 @@
 #+END_SRC
 *** LSP
 #+BEGIN_SRC emacs-lisp
-(setq lsp-headerline-breadcrumb-enable t)
-(setq lsp-ui-doc-enable t)
-(setq lsp-ui-doc-position 'top-right-angle)
-(setq lsp-ui-doc-alignment 'frame)
+(setq lsp-ui-doc-enable t
+      lsp-ui-doc-position 'top-right-corner
+      lsp-ui-doc-alignment 'frame
+      lsp-ui-doc-max-width 70)
 (setq lsp-lens-enable t)
 (setq lsp-ui-sideline-enable nil)
+(setq lsp-ui-imenu-enable t)
 #+END_SRC
+*** Spelling
+#+begin_src emacs-lisp
+(setq ispell-dictionary "en_GB")
+#+end_src
 ** Languages
 *** CSX
 #+BEGIN_SRC emacs-lisp
@@ -104,5 +102,4 @@
 *** Ctrl-/ for Comment/Uncomment
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-/") 'comment-line)
-(global-set-key (kbd "C-c n") 'sharper-main-transient)
 #+END_SRC

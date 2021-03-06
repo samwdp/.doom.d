@@ -1,0 +1,4 @@
+* Inbox
+** TODO j
+
+[[file:~/.config/doom/config.org::*Ctrl-/ for Comment/Uncomment][Ctrl-/ for Comment/Uncomment]]
