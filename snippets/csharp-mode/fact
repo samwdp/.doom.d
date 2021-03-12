@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: fact
+# key: fact
+# uuid: fact
+# --
+
+[Fact]
+public void $1()
+{
+    // Arrange
+    $2
+    // Act
+
+    // Assert
+
+}

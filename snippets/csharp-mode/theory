@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: theory
+# key: theory
+# uuid: theory
+# --
+
+[Theory]
+[InlineData()]
+public void $1()
+{
+    // Arrange
+    $2
+    // Act
+
+    // Assert
+
+}
