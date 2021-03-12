@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: component
+# key: comp
+# condition: t
+# --
+@Component({
+  selector: '$1',
+  templateUrl: '$1.component.html'
+})
+export class $2 implements OnInit {
+  constructor()
+  {}
+
+  ngOnInit(): void {
+  }
+}
+
