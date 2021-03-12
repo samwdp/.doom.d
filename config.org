@@ -20,11 +20,6 @@
 #+BEGIN_SRC emacs-lisp
 (setq inhibit-compacting-font-caches t)
 #+END_SRC
-*** Org Mode
-#+BEGIN_SRC emacs-lisp
-(setq org-directory "~/Dropbox/org")
-(setq org-log-done 'time)
-#+END_SRC
 ** Personal Information
 *** Name
 #+BEGIN_SRC emacs-lisp
@@ -33,7 +28,12 @@
 *** Email Address
 #+BEGIN_SRC emacs-lisp
 (setq user-mail-address "samwdp@gmail.com")
-#+END_SRC
+#+end_src
+*** Org Mode
+#+BEGIN_SRC emacs-lisp
+(setq org-directory "~/Dropbox/org")
+(setq org-log-done 'time)
+#+END_SRC+END_SRC
 ** Doom Theming
 *** Line Numbers
 #+BEGIN_SRC emacs-lisp
@@ -66,12 +66,18 @@
 #+begin_src emacs-lisp
 (setq scroll-margin 6)
 #+end_src
+*** Default Major mode for scrach buffer
+Sets the default major mode of the scratch buffer to org-mode
+#+begin_src emacs-lisp
+(setq initial-major-mode 'org-mode)
+#+end_src
 ** Tools
 *** Projectile
 #+BEGIN_SRC emacs-lisp
 (setq projectile-indexing-method 'native)
 #+END_SRC
 *** Babel
+Adds csharp and powershell languages to the org babel list
 #+BEGIN_SRC emacs-lisp
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -79,6 +85,7 @@
    (powershell . t)))
 #+END_SRC
 *** LSP
+Sets some defaults for LSP mode doe more visuals
 #+BEGIN_SRC emacs-lisp
 (setq lsp-ui-doc-enable t
       lsp-ui-doc-position 'top-right-corner
@@ -93,12 +100,15 @@
 (setq ispell-dictionary "en_GB")
 #+end_src
 *** Windows Specific
+This is used in conjunciton with shell mode to change the deafult shell to powershell core.
+**** TODO This will probably change when the powershell core version updates
 #+begin_src emacs-lisp
-(:if IS-WINDOWS
- (setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe"))
+(when IS-WINDOWS
+  (setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe"))
 #+end_src
 ** Languages
 *** CSX
+This is adding the ability to use csharp-mode with csharp script files
 #+BEGIN_SRC emacs-lisp
 (use-package! csharp-mode
   :mode (("\\.csx\\'" . csharp-mode)))

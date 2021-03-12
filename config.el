@@ -1,6 +1,4 @@
 (setq inhibit-compacting-font-caches t)
-(setq org-directory "~/Dropbox/org")
-(setq org-log-done 'time)
 (setq user-full-name "Sam Precious")
 (setq user-mail-address "samwdp@gmail.com")
 (setq display-line-numbers-type 'relative)
@@ -13,6 +11,7 @@
 (setq doom-modeline-buffer-encoding nil)
 (add-hook 'after-init-hook #'display-battery-mode)
 (setq scroll-margin 6)
+(setq initial-major-mode 'org-mode)
 (setq projectile-indexing-method 'native)
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -26,8 +25,8 @@
 (setq lsp-ui-sideline-enable nil)
 (setq lsp-ui-imenu-enable t)
 (setq ispell-dictionary "en_GB")
-(:if IS-WINDOWS
- (setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe"))
+(when IS-WINDOWS
+  (setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe"))
 (use-package! csharp-mode
   :mode (("\\.csx\\'" . csharp-mode)))
 (global-set-key (kbd "C-/") 'comment-line)
