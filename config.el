@@ -26,7 +26,8 @@
 (setq lsp-ui-sideline-enable nil)
 (setq lsp-ui-imenu-enable t)
 (setq ispell-dictionary "en_GB")
-(setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe")
+(:if IS-WINDOWS
+ (setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe"))
 (use-package! csharp-mode
   :mode (("\\.csx\\'" . csharp-mode)))
 (global-set-key (kbd "C-/") 'comment-line)

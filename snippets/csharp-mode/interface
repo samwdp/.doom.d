@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: interface
-# key: interface
+# key: i
 # uuid: interface
 # --
 public interface $0

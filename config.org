@@ -92,6 +92,11 @@
 #+begin_src emacs-lisp
 (setq ispell-dictionary "en_GB")
 #+end_src
+*** Windows Specific
+#+begin_src emacs-lisp
+(:if IS-WINDOWS
+ (setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe"))
+#+end_src
 ** Languages
 *** CSX
 #+BEGIN_SRC emacs-lisp

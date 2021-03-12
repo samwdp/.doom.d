@@ -6,6 +6,6 @@
 try {
     `(or yas/selected-text (car kill-ring))`
 } catch (${1:Exception}) {
-	$0
-	throw;
+    $0
+    throw;
 }

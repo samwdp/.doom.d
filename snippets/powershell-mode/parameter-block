@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: parameter-block
+# key: paramb
+# condition: t
+# --
+param (
+[Parameter(Mandatory = $${1:true})]
+[${2:string}]\$${3:Foobar}
+)

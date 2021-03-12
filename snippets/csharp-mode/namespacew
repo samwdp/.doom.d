@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: namespacew
-# key: namespacew
+# key: nsw
 # uuid: namespacew
 # --
 namespace $1

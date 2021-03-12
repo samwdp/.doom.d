@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: depencency
+# key: dprop
+# uuid: dprop
+# --
+private readonly $1 

@@ -4,5 +4,5 @@
 try {
     `%`$0
 } catch (${1:type}) {
-	throw;
+    throw;
 }
