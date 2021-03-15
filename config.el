@@ -26,6 +26,8 @@
 (setq lsp-lens-enable t)
 (setq lsp-ui-sideline-enable nil)
 (setq lsp-ui-imenu-enable t)
+(setq ivy-posframe-border-width 5
+      ivy-posframe-min-width 60)
 (setq ispell-dictionary "en_GB")
 (setq ivy-posframe-border-width 5
       ivy-posframe-min-width 60)
