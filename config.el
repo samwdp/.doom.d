@@ -12,6 +12,8 @@
 (add-hook 'after-init-hook #'display-battery-mode)
 (setq scroll-margin 6)
 (setq initial-major-mode 'org-mode)
+(setq doom-localleader-key ","
+      doom-localleader-alt-key "M-,")
 (setq projectile-indexing-method 'native)
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -24,6 +26,9 @@
 (setq lsp-lens-enable t)
 (setq lsp-ui-sideline-enable nil)
 (setq lsp-ui-imenu-enable t)
+(setq ivy-posframe-border-width 5
+      ivy-posframe-min-width 60
+      ivy-posframe-min-height 20)
 (setq ispell-dictionary "en_GB")
 (when IS-WINDOWS
   (setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe"))
