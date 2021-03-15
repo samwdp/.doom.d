@@ -45,14 +45,14 @@
 #+END_SRC
 *** Theme
 #+BEGIN_SRC emacs-lisp
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'my-doom-gruvbox)
 #+END_SRC
 *** Banner
 #+BEGIN_SRC emacs-lisp
 (setq +doom-dashboard-banner-dir
       (concat doom-private-dir "banners/"))
 #+END_SRC
-*** Maximized Frame
+*** Maximised Frame
 #+BEGIN_SRC emacs-lisp
 (toggle-frame-maximized)
 #+END_SRC
@@ -66,10 +66,15 @@
 #+begin_src emacs-lisp
 (setq scroll-margin 6)
 #+end_src
-*** Default Major mode for scrach buffer
+*** Default Major mode for scratch buffer
 Sets the default major mode of the scratch buffer to org-mode
 #+begin_src emacs-lisp
 (setq initial-major-mode 'org-mode)
+#+end_src
+*** Minor mode leader key
+#+begin_src emacs-lisp
+(setq doom-localleader-key ","
+      doom-localleader-alt-key "M-,")
 #+end_src
 ** Tools
 *** Projectile
@@ -99,8 +104,13 @@ Sets some defaults for LSP mode doe more visuals
 #+begin_src emacs-lisp
 (setq ispell-dictionary "en_GB")
 #+end_src
+*** Ivy
+#+begin_src emacs-lisp
+(setq ivy-posframe-border-width 5
+      ivy-posframe-min-width 60)
+#+end_src
 *** Windows Specific
-This is used in conjunciton with shell mode to change the deafult shell to powershell core.
+This is used in conjunction with shell mode to change the default shell to powershell core.
 **** TODO This will probably change when the powershell core version updates
 #+begin_src emacs-lisp
 (when IS-WINDOWS

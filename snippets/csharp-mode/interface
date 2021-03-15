@@ -3,7 +3,10 @@
 # key: i
 # uuid: interface
 # --
-public interface $0
+namespace $0
 {
+    public interface $1
+    {
 
+    }
 }

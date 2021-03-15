@@ -9,3 +9,4 @@
 (package! ob-csharp :recipe (:host github :repo "samwdp/ob-csharp"))
 (package! ob-powershell :recipe (:host github :repo "rkiggen/ob-powershell"))
 (package! emacs-webkit :recipe (:host github :repo "akirakyle/emacs-webkit"))
+(package! gruvbox-theme)

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: property
+# key: prop
+# condition: t
+# --
+public $1 $2 { get; set; } 

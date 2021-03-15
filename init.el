@@ -179,5 +179,5 @@
        ;; twitter           ; twitter client https://twitter.com/vnought
 
        :config
-       ;; literate
+       (:if IS-LINUX literate)
        (default +bindings +smartparens))
