@@ -41,7 +41,9 @@
 #+END_SRC
 *** Font
 #+BEGIN_SRC emacs-lisp
-(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 18))
+(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 18)
+      doom-big-font (font-spec :family "NotoSansMono Nerd Font" :size 36)
+      doom-variable-pitch-font (font-spec :family "NotoSans Nerd Font" :size 18))
 #+END_SRC
 *** Theme
 #+BEGIN_SRC emacs-lisp
@@ -71,10 +73,9 @@ Sets the default major mode of the scratch buffer to org-mode
 #+begin_src emacs-lisp
 (setq initial-major-mode 'org-mode)
 #+end_src
-*** Doom leader keys
+*** Default Directory
 #+begin_src emacs-lisp
-(setq doom-localleader-key ","
-      doom-localleader-alt-key "M-,")
+(setq default-directory "~")
 #+end_src
 ** Tools
 *** Projectile
@@ -102,17 +103,12 @@ Sets some defaults for LSP mode doe more visuals
 #+END_SRC
 *** Ivy
 #+begin_src emacs-lisp
-(setq ivy-posframe-border-width 5
-      ivy-posframe-min-width 60)
+(after! ivy-posframe
+  (setq ivy-posframe-border-width 5))
 #+end_src
 *** Spelling
 #+begin_src emacs-lisp
 (setq ispell-dictionary "en_GB")
-#+end_src
-*** Ivy
-#+begin_src emacs-lisp
-(setq ivy-posframe-border-width 5
-      ivy-posframe-min-width 60)
 #+end_src
 *** Windows Specific
 This is used in conjunction with shell mode to change the default shell to powershell core.

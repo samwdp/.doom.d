@@ -2,7 +2,9 @@
 (setq user-full-name "Sam Precious")
 (setq user-mail-address "samwdp@gmail.com")
 (setq display-line-numbers-type 'relative)
-(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 18))
+(setq doom-font (font-spec :family "NotoSansMono Nerd Font" :size 18)
+      doom-big-font (font-spec :family "NotoSansMono Nerd Font" :size 36)
+      doom-variable-pitch-font (font-spec :family "NotoSans Nerd Font" :size 18))
 (setq doom-theme 'my-doom-gruvbox)
 (setq +doom-dashboard-banner-dir
       (concat doom-private-dir "banners/"))
@@ -12,8 +14,7 @@
 (add-hook 'after-init-hook #'display-battery-mode)
 (setq scroll-margin 6)
 (setq initial-major-mode 'org-mode)
-(setq doom-localleader-key ","
-      doom-localleader-alt-key "M-,")
+(setq default-directory "~")
 (setq projectile-indexing-method 'native)
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -26,11 +27,9 @@
 (setq lsp-lens-enable t)
 (setq lsp-ui-sideline-enable nil)
 (setq lsp-ui-imenu-enable t)
-(setq ivy-posframe-border-width 5
-      ivy-posframe-min-width 60)
+(after! ivy-posframe
+  (setq ivy-posframe-border-width 5))
 (setq ispell-dictionary "en_GB")
-(setq ivy-posframe-border-width 5
-      ivy-posframe-min-width 60)
 (when IS-WINDOWS
   (setq explicit-shell-file-name "C:/Program Files/PowerShell/7/pwsh.exe"))
 (use-package! csharp-mode
