@@ -24,9 +24,9 @@
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        (ivy
-	+fuzzy 
-	+icons
-	+childframe)               ; a search engine for love and life
+        +fuzzy
+        +icons
+        +childframe)               ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -36,19 +36,19 @@
        ;; fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
-       ;; indent-guides     ; highlighted indent columns
+       indent-guides     ; highlighted indent columns
        ;;(ligatures +extra)         ; ligatures and symbols to make your code pretty again
        ;;minimap          ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
-       ;;nav-flash         ; blink cursor line after big motions
+       nav-flash         ; blink cursor line after big motions
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
        ;; tabs              ; a tab bar for Emacs
-       ;; treemacs          ; a project drawer, like neotree but cooler
-       ;; unicode           ; extended unicode support for various languages
+       treemacs          ; a project drawer, like neotree but cooler
+       unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
-       vi-tilde-fringe   ; fringe tildes to mark beyond EOB
+       ;; vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        ;;window-select     ; visually switch windows
        workspaces        ; tab emulation, persistence & separate workspaces
        ;; zen               ; distraction-free coding or writing
@@ -56,13 +56,13 @@
        :editor
        (evil +everywhere); come to the dark side, we have cookies
        file-templates    ; auto-snippets for empty files
-       ;; fold              ; (nigh) universal code folding
+       fold              ; (nigh) universal code folding
        (format +onsave)  ; automated prettiness
        ;;god               ; run Emacs commands without modifier keys
        ;;lispy             ; vim for lisp, for people who don't like vim
        ;;multiple-cursors  ; editing in many places at once
        ;;objed             ; text object editing for the innocent
-       (parinfer +rust)          ; turn lisp into python, sort of
+       ;;(parinfer +rust)          ; turn lisp into python, sort of
        ;;rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        ;;word-wrap         ; soft wrapping with language-aware indent
@@ -88,13 +88,13 @@
        :tools
        ;;ansible
        ;; (debugger +lsp)          ; FIXME stepping through code, to help you add bugs
-       ;;direnv
+       (:if IS-LINUX direnv)
        ;; docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
-       lookup              ; navigate your code and its documentation
+       (lookup +dictionary)              ; navigate your code and its documentation
        lsp
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
@@ -119,8 +119,8 @@
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
        (csharp
-	+lsp 
-	+dotnet)            ; unity, .NET, and mono shenanigans
+        +lsp
+        +dotnet)            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
        ;;(dart +flutter)   ; paint ui and not much else
        ;;elixir            ; erlang done right
@@ -139,7 +139,7 @@
        json              ; At least it ain't XML
        ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
        (javascript 
-	+lsp)        ; all(hope(abandon(ye(who(enter(here))))))
+        +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
        ;;latex             ; writing papers in Emacs has never been so fun
@@ -152,9 +152,9 @@
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org 
-	+pretty 
-	+present 
-	+journal)               ; organize your plain life in plain text
+        +pretty
+        +present
+        +journal)               ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
@@ -169,8 +169,8 @@
        ;;scala             ; java, but good
        ;;scheme            ; a fully conniving family of lisps
        (sh
-	+lsp 
-	+powershell)                ; she sells {ba,z,fi}sh shells on the C xor
+        +lsp
+        +powershell)                ; she sells {ba,z,fi}sh shells on the C xor
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
@@ -184,8 +184,8 @@
        ;;(wanderlust +gmail)
 
        :app
-       calendar
-       ;;irc               ; how neckbeards socialize
+       ;; calendar
+       ;; irc               ; how neckbeards socialize
        ;; (rss +org)        ; emacs as an RSS reader
        ;; twitter           ; twitter client https://twitter.com/vnought
 
