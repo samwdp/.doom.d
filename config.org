@@ -62,10 +62,6 @@
 ;; Don't need the menu; I know them all by heart
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 #+END_SRC
-*** Maximised Frame
-#+BEGIN_SRC emacs-lisp
-(toggle-frame-maximized)
-#+END_SRC
 *** Modeline
 #+BEGIN_SRC emacs-lisp
 (setq doom-modeline-buffer-file-name-style 'file-name)
@@ -86,7 +82,7 @@ Sets the default major mode of the scratch buffer to org-mode
 #+end_src
 *** Counsel
 #+begin_src emacs-lisp
-(setq company-idle-delay  0.2
+(setq company-idle-delay  0.1
       company-tooltip-idle-delay 0)
 #+end_src
 *** Centered Window
@@ -97,6 +93,8 @@ Sets the default major mode of the scratch buffer to org-mode
 *** Projectile
 #+BEGIN_SRC emacs-lisp
 (setq projectile-indexing-method 'native)
+(when IS-WINDOWS
+  (setq projectile-project-search-path '("W:\\foresolutions\\")))
 #+END_SRC
 *** Babel
 Adds csharp and powershell languages to the org babel list
@@ -116,6 +114,7 @@ Sets some defaults for LSP mode doe more visuals
 (setq lsp-lens-enable t)
 (setq lsp-ui-sideline-enable nil)
 (setq lsp-ui-imenu-enable t)
+(setq lsp-completion-show-kind nil)
 #+END_SRC
 *** Ivy
 #+begin_src emacs-lisp
@@ -145,6 +144,20 @@ This is adding the ability to use csharp-mode with csharp script files
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-/") 'comment-line)
 #+END_SRC
+*** Fn keys
+**** f5 for compile
+#+begin_src emacs-lisp
+(global-set-key (kbd "<f5>") 'compile)
+#+end_src
+**** f11 for jump to reference
+#+begin_src emacs-lisp
+(global-set-key (kbd "<f11>") '+lookup/references)
+#+end_src
+**** f12 for jump to definition
+#+begin_src emacs-lisp
+(global-set-key (kbd "<f12>") '+lookup/definition)
+#+end_src
+
 ** Functions
 *** Display Battery if plugged in
 #+begin_src emacs-lisp

@@ -10,3 +10,8 @@
 (package! ob-powershell :recipe (:host github :repo "rkiggen/ob-powershell"))
 (package! battery :disable)
 (package! fancy-battery)
+(package! xahk-mode)
+(package! oauth2)
+(package! request)
+(package! slack)
+(package! alert)
