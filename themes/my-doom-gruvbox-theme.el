@@ -97,7 +97,7 @@ determine the exact padding."
    (hl-line :background bg-alt)
    ((line-number-current-line &override) :background grey :foreground "white" :bold t)
    ((line-number &override) :foreground grey)
-
+   ((font-lock-comment-face &override) :inherit 'fixed-pitch-serif :slant 'italic)
    ;; Vimish-fold
    ((vimish-fold-overlay &override) :inherit 'font-lock-comment-face :background accent :weight 'light)
    ((vimish-fold-mouse-face &override) :foreground "white" :background yellow :weight 'light)

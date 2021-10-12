@@ -23,10 +23,11 @@
        (company +childframe)           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
-       (ivy
-        +fuzzy
-        +icons
-        +childframe)               ; a search engine for love and life
+       ;; (ivy
+       ;;  +fuzzy
+       ;;  +icons
+       ;;  +childframe)               ; a search engine for love and life
+       (vertico +icons)
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -37,7 +38,7 @@
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
        indent-guides     ; highlighted indent columns
-       ;;(ligatures +extra)         ; ligatures and symbols to make your code pretty again
+       (ligatures +hasklig +extra)         ; ligatures and symbols to make your code pretty again
        ;;minimap          ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink cursor line after big motions
@@ -60,7 +61,7 @@
        (format +onsave)  ; automated prettiness
        ;;god               ; run Emacs commands without modifier keys
        ;;lispy             ; vim for lisp, for people who don't like vim
-       ;;multiple-cursors  ; editing in many places at once
+       multiple-cursors  ; editing in many places at once
        ;;objed             ; text object editing for the innocent
        ;;(parinfer +rust)          ; turn lisp into python, sort of
        ;;rotate-text       ; cycle region at point between text candidates
@@ -82,7 +83,7 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       spell             ; tasing you for misspelling mispelling
+       (spell +aspell +everywhere)             ; tasing you for misspelling mispelling
        ;; (grammar +childframe)           ; tasing grammar mistake every you make
 
        :tools
@@ -138,7 +139,7 @@
        ;;idris             ;
        json              ; At least it ain't XML
        ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
-       (javascript)        ; all(hope(abandon(ye(who(enter(here))))))
+       (javascript +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
        ;;latex             ; writing papers in Emacs has never been so fun
