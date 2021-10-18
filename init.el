@@ -23,10 +23,10 @@
        (company +childframe)           ; the ultimate code completion backend
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
-       ;; (ivy
-       ;;  +fuzzy
-       ;;  +icons
-       ;;  +childframe)               ; a search engine for love and life
+       (ivy
+        +fuzzy
+        +icons
+        +childframe)               ; a search engine for love and life
        (vertico +icons)
 
        :ui
@@ -42,11 +42,11 @@
        ;;minimap          ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink cursor line after big motions
-       ;;neotree           ; a project drawer, like NERDTree for vim
+       neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
        ;; tabs              ; a tab bar for Emacs
-       (treemacs +lsp)          ; a project drawer, like neotree but cooler
+       ;; (treemacs +lsp)          ; a project drawer, like neotree but cooler
        unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
        ;; vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -83,12 +83,12 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       (spell +aspell +everywhere)             ; tasing you for misspelling mispelling
+       ;; (spell +aspell +everywhere)             ; tasing you for misspelling mispelling
        ;; (grammar +childframe)           ; tasing grammar mistake every you make
 
        :tools
        ;;ansible
-       ;; (debugger +lsp)          ; FIXME stepping through code, to help you add bugs
+       (debugger +lsp)          ; FIXME stepping through code, to help you add bugs
        (:if IS-LINUX direnv)
        ;; docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
@@ -154,6 +154,7 @@
        (org 
         +pretty
         +present
+        +roam2
         +journal)               ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more

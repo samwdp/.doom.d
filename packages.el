@@ -10,3 +10,6 @@
 (package! ob-powershell :recipe (:host github :repo "rkiggen/ob-powershell"))
 (package! battery :disable)
 (package! fancy-battery)
+(package! cheat-sh)
+(package! emacsql-sqlite)
+(package! lsp-mssql)

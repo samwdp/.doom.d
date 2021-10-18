@@ -1,2 +1,3 @@
 .mbsyncrc
 flycheck_init.el
+private/
