@@ -109,7 +109,8 @@
  :g "C-<f12>" #'+lookup/implementations
  :g "C-/" #'comment-line
  :leader
- :desc "Format buffer" "f o" #'+format/buffer)
+ :desc "Format buffer" "f o" #'+format/buffer
+ :desc "Open Neotree" "o p" #'neotree-toggle)
 (map! (:when (featurep! :tools lsp)
        :g "<f11>" #'+lookup/references
        :g "<f12>" #'+lookup/definition
@@ -120,12 +121,15 @@
         (:map csharp-mode-map
           :localleader
           :desc "Sharper" "s" #'sharper-main-transient)))
+(map! (:when (featurep! :lang emacs-lisp)
+       (:map emacs-lisp-mode-map
+        :g "<f3>" #'eval-buffer)))
 (map! (:when (featurep! :tools debugger +lsp)
        (:map dap-mode-map
         :g "<f2>" #'dap-breakpoint-toggle
         :g "<f10>" #'dap-step-in
         :g "<f11>" #'dap-next
         :g "<f8>"  #'dap-continue)))
-(when (f-directory? (concat doom-private-dir "doom-private"))
-  (load! "private/sql")
-  )
+(defvar doom-user-private "doom-private")
+(when (f-directory? (concat doom-private-dir doom-user-private))
+  (mapc 'load (file-expand-wildcards (concat doom-private-dir doom-user-private "/*.el"))))

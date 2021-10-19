@@ -226,7 +226,8 @@ This is adding the ability to use csharp-mode with csharp script files
  :g "C-<f12>" #'+lookup/implementations
  :g "C-/" #'comment-line
  :leader
- :desc "Format buffer" "f o" #'+format/buffer)
+ :desc "Format buffer" "f o" #'+format/buffer
+ :desc "Open Neotree" "o p" #'neotree-toggle)
 #+end_src
 *** LSP
 #+begin_src emacs-lisp
@@ -244,6 +245,12 @@ This is adding the ability to use csharp-mode with csharp script files
           :localleader
           :desc "Sharper" "s" #'sharper-main-transient)))
 #+end_src
+*** ELISP
+#+begin_src emacs-lisp
+(map! (:when (featurep! :lang emacs-lisp)
+       (:map emacs-lisp-mode-map
+        :g "<f3>" #'eval-buffer)))
+#+end_src
 *** Dap mode
 #+begin_src emacs-lisp
 (map! (:when (featurep! :tools debugger +lsp)
@@ -255,7 +262,7 @@ This is adding the ability to use csharp-mode with csharp script files
 #+end_src
 ** Include Files
 #+begin_src emacs-lisp
-(when (f-directory? (concat doom-private-dir "doom-private"))
-  (load! "private/sql")
-  )
+(defvar doom-user-private "doom-private")
+(when (f-directory? (concat doom-private-dir doom-user-private))
+  (mapc 'load (file-expand-wildcards (concat doom-private-dir doom-user-private "/*.el"))))
 #+end_src
